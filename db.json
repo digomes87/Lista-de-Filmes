@@ -1,5 +1,5 @@
 {
-  "series":[
+  "series": [
     {
       "id": 1,
       "name": "How I met your mother",
@@ -12,7 +12,7 @@
       "name": "Friends",
       "status": "watching",
       "genre": "Comédia",
-      "current":{
+      "current": {
         "episode": "01",
         "season": "09"
       },
@@ -31,9 +31,28 @@
       "status": "toWatch",
       "genre": "Drama",
       "comments": "Galera fala bem"
+    },
+    {
+      "id": 5
+    },
+    {
+      "name": "homem aranha",
+      "comentario": "de volta ao lar.",
+      "status": "watched",
+      "genero": "Comédia",
+      "id": 6
+    },
+    {
+      "name": "Godizila",
+      "comentario": "filme de cacao estilo transforme",
+      "status": "watched",
+      "genre": "Comédia",
+      "id": 7
     }
   ],
-  "genres":[
-    "Comédia", "Drama", "Ação"
+  "genres": [
+    "Comédia",
+    "Drama",
+    "Ação"
   ]
 }

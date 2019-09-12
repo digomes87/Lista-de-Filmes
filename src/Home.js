@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link } from 'react-router-dom'
 import api from './Api'
 
 class Home extends Component {
@@ -6,7 +7,7 @@ class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      genres: [],
+      genre: [],
       isLoanding: false
     }
   }
@@ -16,16 +17,16 @@ class Home extends Component {
     api.loadGenres().then((res) => {
       this.setState({
         isLoanding: false,
-        genres: res.data
+        genre: res.data
       })
     })
 
     // axios.get('http://localhost:3001/genres').then((res)=>console.log(res))
   }
 
-  renderLink(genres) {
+  renderLink(genre) {
     return (
-      <span><a href="{}">{genres}</a></span>
+      <span><Link key={genre} to={`/series/${genre}`}>{genre}</Link></span>
     )
   }
 
@@ -51,7 +52,7 @@ class Home extends Component {
 
           {
             !this.state.isLoanding &&
-            <span>Ver séries do genero{(this.state.genres.map(this.renderLink))}</span>
+            <span>Ver séries do genero{(this.state.genre.map(this.renderLink))}</span>
           }
         </section>
       </div>

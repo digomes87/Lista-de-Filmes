@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom' //Controla a navegacao
 
 import Home from './Home'
-// import Sobre from './Sobre'
+import Serie from './Series'
 import NovaSeries from './NovaSeries'
 
 class App extends Component {
@@ -35,6 +35,7 @@ class App extends Component {
           {/* Aqui estou dizendo atravez do Route que minha home deve ser exatamente meu componete Home, assim como posso definir qlqr outro como home */}
           <Route exact path='/' component={Home} />
           <Route exact path='/Novo/' component={NovaSeries} />
+          <Route path='/series/:genre' component={Serie} />
           {/* <Route exact path='/Sobre' component={Sobre} /> */}
           {/* <Home /> */}
         </div>
